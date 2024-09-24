@@ -7,14 +7,12 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --bg-color: hsl(220, 18%, 78%);
-  --bg-color-light: hsl(220, 18%, 86%);
-  --title-color: hsl(220, 8%, 10%);
-  --text-color: hsl(220, 4%, 32%);
-  --text-color-light: hsl(220, 4%, 55%);
-  --body-color: hsl(220, 18%, 99%);
-  --container-color: hsl(220, 18%, 97%);
-  --footer-color: hsl(211, 55%, 41%);
+  --bg-color: #e3ba6a;
+  --container-color: #dfba6b;
+  --title-color: #000000;
+  --text-color: rgb(9, 31, 128);
+  --footer-color: #a6742e;
+  --accent-color: #02aef9;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -64,7 +62,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
@@ -91,13 +89,16 @@ img {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --bg-color: hsl(220, 18%, 22%);
-  --bg-color-light: hsl(220, 18%, 14%);
-  --title-color: hsl(220, 8%, 90%);
-  --text-color: hsl(220, 4%, 68%);
-  --body-color: hsl(220, 18%, 18%);
-  --container-color: hsl(220, 18%, 21%);
-  --footer-color: hsl(211, 55%, 59%);
+/* Dark Theme */
+.dark-theme {
+  --bg-color: #062a3e; /* Dark background */
+  --container-color: #01406c; /* Slightly lighter for containers */
+  --title-color: #fee998; /* Light yellow for titles */
+  --text-color: #dfba6b; /* Warm golden for body text */
+  --footer-color: #a6742e; /* Dark footer */
+  --accent-color: #02aef9; /* Bright accent color */
+}
+
 }
 /*========== Button Dark/Light ==========*/
 .change-theme {
@@ -165,7 +166,7 @@ body.dark-theme {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+ background-color: #bc974c;
   z-index: var(--z-fixed);
   transition: all 0.5s;
 }
@@ -648,6 +649,7 @@ body.dark-theme {
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
+    border-bottom: 1px solid #00000092;
   }
   .nav__menu {
     width: initial;
