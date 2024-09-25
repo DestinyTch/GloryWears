@@ -54,12 +54,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
- user-select: none;
 }
 
 html {
   scroll-behavior: smooth;
- user-select: none;
 }
 
 body {
@@ -67,7 +65,6 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--bg-color);
   color: var(--text-color);
-   user-select: none;
 }
 
 h1,
@@ -75,23 +72,19 @@ h2,
 h3 {
   color: var(--title-color);
   font-weight: var(--font-medium);
-   user-select: none;
 }
 
 ul {
   list-style: none;
-   user-select: none;
 }
 
 a {
   text-decoration: none;
-   user-select: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
-   user-select: none;
 }
 
 /*=============== THEME ===============*/
@@ -175,7 +168,6 @@ body.dark-theme {
   left: 0;
   width: 100%;
  background-color: #bc974c;
-   user-select: none;
   z-index: var(--z-fixed);
   transition: all 0.5s;
 }
@@ -196,7 +188,7 @@ body.dark-theme {
   .nav__menu {
     position: fixed;
     bottom: 1.5rem;
-    background-color: var(--body-color);
+    background-color: #bc974c;
     box-shadow: 0 4px 12px hsla(220, 18%, 40%, 0.15);
     width: 90%;
     left: 0;
