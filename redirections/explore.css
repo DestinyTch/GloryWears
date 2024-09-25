@@ -8,9 +8,9 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --bg-color: #e3ba6a;
-  --container-color: #dfba6b;
-  --title-color: #000000;
+  --bg-color: white;
+  --container-color: #fff;
+  --title-color: #1E2A73;
   --text-color: rgb(0, 0, 0);
   --footer-color: #a6742e;
   --accent-color: #02aef9;
@@ -63,7 +63,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--bg-color);
+  background-color: white;
   color: var(--text-color);
 }
 
@@ -160,7 +160,7 @@ body.dark-theme {
   left: 0;
   width: 100%;
   color: black;
- background-color: #bc974c;
+ background-color: white;
   z-index: var(--z-fixed);
   transition: all 0.5s;
 }
@@ -168,6 +168,7 @@ body.dark-theme {
 .nav {
   height: var(--header-height);
   display: flex;
+  background: #FFF;
   justify-content: space-between;
   align-items: center;
 }
@@ -181,8 +182,8 @@ body.dark-theme {
   .nav__menu {
     position: fixed;
     bottom: 1.5rem;
-    background-color: #bc974c;
-    box-shadow: 0 4px 12px hsla(220, 18%, 40%, 0.15);
+    background-color: #C29623;
+    box-shadow: 0 12px 12px hsla(220, 18, 40%, 0.15);
     width: 90%;
     left: 0;
     right: 0;
@@ -212,7 +213,7 @@ body.dark-theme {
 }
 /* Change background header */
 .scroll-header {
-  background-color: var(--body-color);
+  background-color: white;
   box-shadow: 0 1px 4px hsla(220, 4%, 15%, 0.1);
 }
 
@@ -766,5 +767,4 @@ body.dark-theme {
 @media screen and (min-width: 3840px) {
   body {
     zoom: 2.3;
-  }
 }
