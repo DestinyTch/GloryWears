@@ -4,6 +4,7 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
+  user-select: none;
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -649,7 +650,7 @@ body.dark-theme {
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
-    border-bottom: 1px solid #00000092;
+    border-bottom: 1px solid #b6b0b092;
   }
   .nav__menu {
     width: initial;
