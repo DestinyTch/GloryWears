@@ -167,7 +167,7 @@ body.dark-theme {
   top: 0;
   left: 0;
   width: 100%;
- background-color: #bc974c;
+ background-color: #be9d5a;
   z-index: var(--z-fixed);
   transition: all 0.5s;
 }
