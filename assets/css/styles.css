@@ -96,7 +96,7 @@ img {
 body.dark-theme {
   --bg-color: hsl(220, 18%, 22%);
   --bg-color-light: hsl(220, 18%, 14%);
-  --title-color: hsl(220, 8%, 90%);
+  --title-color: hsl(0, 0%, 0%);
   --text-color: hsl(220, 4%, 68%);
   --body-color: hsl(220, 18%, 18%);
   --container-color: hsl(220, 18%, 21%);
