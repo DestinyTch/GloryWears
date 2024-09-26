@@ -12,7 +12,7 @@
   --bg-color-light: hsl(0, 0%, 100%);
   --title-color: hsl(220, 8%, 10%);
   --text-color: hsl(214, 40%, 38%);
-  --text-color-light: hsl(0, 0%, 100%);
+  --text-color-light: hsl(0, 0%, 0%);
   --body-color: hsl(220, 18%, 99%);
   --container-color: hsl(220, 18%, 97%);
   --footer-color: hsl(211, 55%, 41%);
@@ -232,7 +232,7 @@ body.dark-theme {
 
 /* Active link */
 .active-link {
-  color: var(--title-color);
+  color: var(--title-colo r);
 }
 /*=============== HOME ===============*/
 .home {
