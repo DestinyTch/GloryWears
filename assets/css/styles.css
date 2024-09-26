@@ -8,10 +8,9 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --bg-color-light: hsl(0, 0%, 100%);
-  --bg-color: hsl(0, 0%, 0%);
+  --bg-color: white;
   --container-color: #fff;
-  --title-color: #ffffff;
+  --title-color: #1E2A73;
   --text-color: rgb(0, 0, 0);
   --footer-color: #a6742e;
   --accent-color: #02aef9;
@@ -64,7 +63,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: white;
   color: var(--text-color);
 }
 
@@ -91,14 +90,10 @@ img {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --bg-color: hsl(0, 0%, 100%);
-  --bg-color-light: hsl(220, 18%, 14%);
-  --title-color: hs l(220, 8%, 90%);
-  --text-color: hsl(220, 4%, 68%);
-  --body-color: hsl(220, 18%, 18%);
-  --container-color: hsl(220, 18%, 21%);
-  --footer-color: hsl(211, 55%, 59%);
-}======= Button Dark/Light ==========*/
+/* Dark Theme */
+
+}
+/*========== Button Dark/Light ==========*/
 .change-theme {
   color: var(--title-color);
   font-size: 1.125rem;
@@ -190,11 +185,10 @@ body.dark-theme {
   .nav__menu {
     position: fixed;
     bottom: 1.5rem;
-    background-color: #000000;
+    background-color: #C29623;
     box-shadow: 0 5px 12px hsla(220, 18, 40%, 1.15);
     width: 90%;
     left: 0;
-    color: white;
     right: 0;
     margin: 0 auto;
     padding: 1.25rem 2.8rem;
@@ -222,7 +216,7 @@ body.dark-theme {
 }
 /* Change background header */
 .scroll-header {
-  background-color: rgb(0, 0, 0);
+  background-color: white;
   box-shadow: 0 1px 4px hsla(220, 4%, 15%, 0.99);
 }
 
@@ -789,41 +783,41 @@ body.dark-theme {
     zoom: 2.3;
 }
 
-#offline-message {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  font-size: 24px;
-  text-align: center;
-  visibility: hidden; /* Hidden by default */
-}
+    #offline-message {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      font-size: 24px;
+      text-align: center;
+      visibility: hidden; /* Hidden by default */
+    }
 
-#online-notification {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-  padding: 10px 20px;
-  background-color: #28a745; /* Green for success */
-  color: white;
-  border-radius: 5px;
-  visibility: hidden; /* Hidden by default */
-}
+    #online-notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      padding: 10px 20px;
+      background-color: #28a745; /* Green for success */
+      color: white;
+      border-radius: 5px;
+      visibility: hidden; /* Hidden by default */
+    }
 
-/* Animation for online notification */
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
+    /* Animation for online notification */
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
 
-.fade-out {
-  animation: fadeOut 3s forwards;
-}
+    .fade-out {
+      animation: fadeOut 3s forwards;
+    }
