@@ -8,12 +8,14 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --bg-color: white;
-  --container-color: #fff;
-  --title-color: #1E2A73;
-  --text-color: rgb(0, 0, 0);
-  --footer-color: #a6742e;
-  --accent-color: #02aef9;
+  --bg-color: hsl(220, 18%, 78%);
+  --bg-color-light: hsl(220, 18%, 86%);
+  --title-color: hsl(220, 8%, 10%);
+  --text-color: hsl(220, 4%, 32%);
+  --text-color-light: hsl(220, 4%, 55%);
+  --body-color: hsl(220, 18%, 99%);
+  --container-color: hsl(220, 18%, 97%);
+  --footer-color: hsl(211, 55%, 41%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -63,9 +65,10 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: white;
+  background-color: var(--body-color);
   color: var(--text-color);
 }
+
 
 h1,
 h2,
@@ -90,6 +93,15 @@ img {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 
+body.dark-theme {
+  --bg-color: hsl(220, 18%, 22%);
+  --bg-color-light: hsl(220, 18%, 14%);
+  --title-color: hsl(220, 8%, 90%);
+  --text-color: hsl(220, 4%, 68%);
+  --body-color: hsl(220, 18%, 18%);
+  --container-color: hsl(220, 18%, 21%);
+  --footer-color: hsl(211, 55%, 59%);
+}
 /*========== Button Dark/Light ==========*/
 .change-theme {
   color: var(--title-color);
@@ -168,7 +180,6 @@ img {
   height: var(--header-height);
   display: flex;
   box-shadow: 0 8px 12px hsla(220, 18, 40%, 1.15);
-  background: #FFF;
   justify-content: space-between;
   align-items: center;
 }
@@ -182,7 +193,7 @@ img {
   .nav__menu {
     position: fixed;
     bottom: 1.5rem;
-    background-color: #C29623;
+    background-color: var(--body-color);
     box-shadow: 0 5px 12px hsla(220, 18, 40%, 1.15);
     width: 90%;
     left: 0;
@@ -213,8 +224,8 @@ img {
 }
 /* Change background header */
 .scroll-header {
-  background-color: white;
-  box-shadow: 0 1px 4px hsla(220, 4%, 15%, 0.99);
+  background-color: var(--body-color);
+  box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
 }
 
 /* Active link */
