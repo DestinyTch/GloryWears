@@ -62,9 +62,39 @@ const scrollUp = () => {
 };
 window.addEventListener("scroll", scrollUp);
 /*=============== DARK LIGHT THEME ===============*/
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "ri-sun-line";
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
 
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
 
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
+    iconTheme
+  );
+}
 
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener("click", () => {
+  // Add or remove the dark / icon theme
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  // We save the theme and the current icon that the user chose
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+});
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
   origin: "top",
@@ -80,46 +110,3 @@ sr.reveal(`.home__images`, { delay: 600, origin: "bottom" });
 sr.reveal(`.new__card, .brand__img`, { interval: 100 });
 sr.reveal(`.collection__explore:nth-child(1)`, { origin: "right" });
 sr.reveal(`.collection__explore:nth-child(2)`, { origin: "left" });
-
-function showOfflineMessage() {
-  document.getElementById('offline-message').style.visibility = 'visible';
-}
-
-// Function to hide the offline message
-function hideOfflineMessage() {
-  document.getElementById('offline-message').style.visibility = 'hidden';
-}
-
-// Function to show the online notification
-function showOnlineNotification() {
-  const notification = document.getElementById('online-notification');
-  notification.style.visibility = 'visible';
-  notification.classList.remove('fade-out'); // Remove any previous fade-out class
-  setTimeout(() => {
-    notification.classList.add('fade-out'); // Add fade-out class after showing
-    setTimeout(() => {
-      notification.style.visibility = 'hidden'; // Hide after fade-out
-    }, 3000); // Matches the duration of fade-out animation
-  }, 1000); // Show for 1 second before fading
-}
-
-// Event listeners to detect network status changes
-window.addEventListener('offline', showOfflineMessage);
-window.addEventListener('online', () => {
-  hideOfflineMessage();
-  showOnlineNotification();
-});
-
-// Initial check when the page loads
-if (!navigator.onLine) {
-  showOfflineMessage();
-}
-
-// Initialize ScrollReveal
-ScrollReveal().reveal('.reveal', {
-  duration: 1000,    // Animation duration in milliseconds
-  origin: 'bottom',  // Animation starts from the bottom
-  distance: '50px',  // Distance to animate the element
-  easing: 'ease-in-out', // Type of easing for the animation
-  reset: false       // Keep the animation once revealed
-});
