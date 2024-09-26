@@ -233,7 +233,7 @@ body.dark-theme {
 
 /* Active link */
 .active-link {
-  color: var(--title-colo r);
+  color: #99971c;
 }
 /*=============== HOME ===============*/
 .home {
