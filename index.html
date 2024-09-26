@@ -321,5 +321,28 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>
+    <!-- Add this script in your HTML, ideally at the end of the body -->
+<script>
+  const themeButton = document.querySelector('.ri-moon-clear-line');
+  const body = document.body;
+
+  themeButton.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    
+    // Optionally, save the theme in localStorage to persist between page reloads
+    if (body.classList.contains('dark-theme')) {
+      localStorage.setItem('selected-theme', 'dark');
+    } else {
+      localStorage.setItem('selected-theme', 'light');
+    }
+  });
+
+  // On page load, check for the saved theme
+  const savedTheme = localStorage.getItem('selected-theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+  }
+</script>
+
   </body>
 </html>
