@@ -89,10 +89,7 @@ img {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
-body.dark-theme {
-/* Dark Theme */
 
-}
 /*========== Button Dark/Light ==========*/
 .change-theme {
   color: var(--title-color);
@@ -821,3 +818,4 @@ body.dark-theme {
     .fade-out {
       animation: fadeOut 3s forwards;
     }
+  }
