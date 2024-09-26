@@ -194,6 +194,7 @@ body.dark-theme {
     position: fixed;
     bottom: 1.5rem;
     background-color: white;
+    color: black;
     box-shadow: 0 5px 12px hsla(220, 18, 40%, 1.15);
     width: 90%;
     left: 0;
