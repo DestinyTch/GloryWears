@@ -740,10 +740,10 @@ body.dark-theme {
   .home__images img:nth-child(1) {
     width: 345px;
     top: -14.5rem;
-    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
+    
   }
   .home__images img:nth-child(2) {
-    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
+    
     width: 277px;
   }
   .new__container {
@@ -753,7 +753,7 @@ body.dark-theme {
   }
   .new__img {
     margin-bottom: 1.25rem;
-    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
+    
   }
   .new__title {
     font-size: var(--h3-font-size);
