@@ -210,7 +210,7 @@ body.dark-theme {
     align-items: center;
   }
   .nav__link {
-    color: var(--text-color-light);
+    color: black;
     font-weight: var(--font-medium);
     display: grid;
     justify-items: center;
