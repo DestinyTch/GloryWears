@@ -8,7 +8,7 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --bg-color: hsl(220, 18%, 78%);
+  --bg-color: hsl(0, 0%, 100%);
   --bg-color-light: hsl(220, 18%, 86%);
   --title-color: hsl(220, 8%, 10%);
   --text-color: hsl(220, 4%, 32%);
