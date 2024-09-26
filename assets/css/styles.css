@@ -195,7 +195,7 @@ body.dark-theme {
     bottom: 1.5rem;
     background-color: white;
     color: black;
-    box-shadow: 0 5px 7px hsla(220, 18, 40%, 1.15);
+    box-shadow: 0 3px 7px hsla(220, 18, 40%, 1.15);
     width: 90%;
     left: 0;
     right: 0;
