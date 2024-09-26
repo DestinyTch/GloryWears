@@ -91,10 +91,14 @@ img {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-/* Dark Theme */
-
-}
-/*========== Button Dark/Light ==========*/
+  --bg-color: hsl(69, 76%, 45%);
+  --bg-color-light: hsl(220, 18%, 14%);
+  --title-color: hsl(220, 8%, 90%);
+  --text-color: hsl(220, 4%, 68%);
+  --body-color: hsl(220, 18%, 18%);
+  --container-color: hsl(220, 18%, 21%);
+  --footer-color: hsl(211, 55%, 59%);
+}======= Button Dark/Light ==========*/
 .change-theme {
   color: var(--title-color);
   font-size: 1.125rem;
