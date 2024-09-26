@@ -782,3 +782,42 @@ body.dark-theme {
   body {
     zoom: 2.3;
 }
+
+#offline-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 24px;
+  text-align: center;
+  visibility: hidden; /* Hidden by default */
+}
+
+#online-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 10px 20px;
+  background-color: #28a745; /* Green for success */
+  color: white;
+  border-radius: 5px;
+  visibility: hidden; /* Hidden by default */
+}
+
+/* Animation for online notification */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade-out {
+  animation: fadeOut 3s forwards;
+}

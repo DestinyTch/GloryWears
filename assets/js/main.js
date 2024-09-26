@@ -110,3 +110,46 @@ sr.reveal(`.home__images`, { delay: 600, origin: "bottom" });
 sr.reveal(`.new__card, .brand__img`, { interval: 100 });
 sr.reveal(`.collection__explore:nth-child(1)`, { origin: "right" });
 sr.reveal(`.collection__explore:nth-child(2)`, { origin: "left" });
+
+function showOfflineMessage() {
+  document.getElementById('offline-message').style.visibility = 'visible';
+}
+
+// Function to hide the offline message
+function hideOfflineMessage() {
+  document.getElementById('offline-message').style.visibility = 'hidden';
+}
+
+// Function to show the online notification
+function showOnlineNotification() {
+  const notification = document.getElementById('online-notification');
+  notification.style.visibility = 'visible';
+  notification.classList.remove('fade-out'); // Remove any previous fade-out class
+  setTimeout(() => {
+    notification.classList.add('fade-out'); // Add fade-out class after showing
+    setTimeout(() => {
+      notification.style.visibility = 'hidden'; // Hide after fade-out
+    }, 3000); // Matches the duration of fade-out animation
+  }, 1000); // Show for 1 second before fading
+}
+
+// Event listeners to detect network status changes
+window.addEventListener('offline', showOfflineMessage);
+window.addEventListener('online', () => {
+  hideOfflineMessage();
+  showOnlineNotification();
+});
+
+// Initial check when the page loads
+if (!navigator.onLine) {
+  showOfflineMessage();
+}
+
+// Initialize ScrollReveal
+ScrollReveal().reveal('.reveal', {
+  duration: 1000,    // Animation duration in milliseconds
+  origin: 'bottom',  // Animation starts from the bottom
+  distance: '50px',  // Distance to animate the element
+  easing: 'ease-in-out', // Type of easing for the animation
+  reset: false       // Keep the animation once revealed
+});
