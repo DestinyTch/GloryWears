@@ -193,7 +193,7 @@ body.dark-theme {
   .nav__menu {
     position: fixed;
     bottom: 1.5rem;
-    background-color: var(--body-color);
+    background-color: white;
     box-shadow: 0 5px 12px hsla(220, 18, 40%, 1.15);
     width: 90%;
     left: 0;
