@@ -63,25 +63,6 @@ const scrollUp = () => {
 window.addEventListener("scroll", scrollUp);
 /*=============== DARK LIGHT THEME ===============*/
 
-const themeButton = document.querySelector('.ri-moon-clear-line');
-  const body = document.body;
-
-  // Toggle dark theme on button click and save preference in localStorage
-  themeButton.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-    
-    // Save the selected theme in localStorage
-    if (body.classList.contains('dark-theme')) {
-      localStorage.setItem('selected-theme', 'dark');
-    } else {
-      localStorage.setItem('selected-theme', 'light');
-    }
-  });
-
-  // Check for saved theme on page load and apply it
-  const savedTheme = localStorage.getItem('selected-theme');
-  if (savedTheme === 'dark') {
-    body.classList.add('dark-theme');
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
