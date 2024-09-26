@@ -62,24 +62,27 @@ const scrollUp = () => {
 };
 window.addEventListener("scroll", scrollUp);
 /*=============== DARK LIGHT THEME ===============*/
+
 const themeButton = document.querySelector('.ri-moon-clear-line');
-const body = document.body;
+  const body = document.body;
 
-themeButton.addEventListener('click', () => {
-  body.classList.toggle('dark-theme');
-  
-  // Optionally, save the theme in localStorage to persist between page reloads
-  if (body.classList.contains('dark-theme')) {
-    localStorage.setItem('selected-theme', 'dark');
-  } else {
-    localStorage.setItem('selected-theme', 'light');
-  }
-});
+  // Toggle dark theme on button click and save preference in localStorage
+  themeButton.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    
+    // Save the selected theme in localStorage
+    if (body.classList.contains('dark-theme')) {
+      localStorage.setItem('selected-theme', 'dark');
+    } else {
+      localStorage.setItem('selected-theme', 'light');
+    }
+  });
 
-// On page load, check for the saved theme
-const savedTheme = localStorage.getItem('selected-theme');
-if (savedTheme === 'dark') {
-  body.classList.add('dark-theme');
+  // Check for saved theme on page load and apply it
+  const savedTheme = localStorage.getItem('selected-theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
