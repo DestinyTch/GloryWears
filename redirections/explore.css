@@ -8,12 +8,14 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --bg-color: white;
-  --container-color: #fff;
-  --title-color: #1E2A73;
-  --text-color: rgb(0, 0, 0);
-  --footer-color: #a6742e;
-  --accent-color: #02aef9;
+  --bg-color: hsl(0, 0%, 100%);
+  --bg-color-light: hsl(0, 0%, 100%);
+  --title-color: hsl(220, 8%, 10%);
+  --text-color: hsl(214, 40%, 38%);
+  --text-color-light: hsl(0, 0%, 0%);
+  --body-color: hsl(220, 18%, 99%);
+  --container-color: hsl(220, 18%, 97%);
+  --footer-color: hsl(211, 55%, 41%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -63,9 +65,10 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: white;
+  background-color: var(--body-color);
   color: var(--text-color);
 }
+
 
 h1,
 h2,
@@ -89,9 +92,15 @@ img {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
-body.dark-theme {
-/* Dark Theme */
 
+body.dark-theme {
+  --bg-color: hsl(220, 18%, 22%);
+  --bg-color-light: hsl(220, 18%, 14%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(220, 4%, 68%);
+  --body-color: hsl(220, 18%, 18%);
+  --container-color: hsl(220, 18%, 21%);
+  --footer-color: hsl(211, 55%, 59%);
 }
 /*========== Button Dark/Light ==========*/
 .change-theme {
@@ -104,7 +113,7 @@ body.dark-theme {
     the website, in dark theme 
 ==========*/
 .dark-theme .scroll-header {
-  box-shadow: 0 2px 8px hsla(220, 18%, 8%, 0.3);
+  box-shadow: 0 2px 5px hsla(220, 18%, 8%, 0.3);
 }
 
 .dark-theme .nav__menu {
@@ -160,6 +169,8 @@ body.dark-theme {
   left: 0;
   width: 100%;
   color: black;
+  box-shadow: 0 4px hsla(220, 18%, 8%, 0.3);
+  
  background-color: white;
   z-index: var(--z-fixed);
   transition: all 0.5s;
@@ -168,7 +179,7 @@ body.dark-theme {
 .nav {
   height: var(--header-height);
   display: flex;
-  background: #FFF;
+  box-shadow: 0 8px 12px hsla(220, 18, 40%, 1.15);
   justify-content: space-between;
   align-items: center;
 }
@@ -182,8 +193,9 @@ body.dark-theme {
   .nav__menu {
     position: fixed;
     bottom: 1.5rem;
-    background-color: #C29623;
-    box-shadow: 0 12px 12px hsla(220, 18, 40%, 0.15);
+    background-color: white;
+    color: black;
+    box-shadow: 0 3px 7px hsla(220, 18, 40%, 1.15);
     width: 90%;
     left: 0;
     right: 0;
@@ -198,7 +210,7 @@ body.dark-theme {
     align-items: center;
   }
   .nav__link {
-    color: var(--text-color-light);
+    color: black;
     font-weight: var(--font-medium);
     display: grid;
     justify-items: center;
@@ -209,17 +221,19 @@ body.dark-theme {
   }
   .nav__link span {
     font-size: 0.688rem;
+    color: black;
   }
 }
 /* Change background header */
 .scroll-header {
   background-color: white;
-  box-shadow: 0 1px 4px hsla(220, 4%, 15%, 0.1);
+  color: black;
+  box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
 }
 
 /* Active link */
 .active-link {
-  color: var(--title-color);
+  color: #99971c;
 }
 /*=============== HOME ===============*/
 .home {
@@ -258,12 +272,14 @@ body.dark-theme {
   width: 224px;
   position: absolute;
   right: -1.5rem;
+  box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
   top: -9.5rem;
 }
 
 .home__images img:nth-child(2) {
   width: 180px;
   margin-left: 0.5rem;
+    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
   position: relative;
 }
 /*=============== BUTTON ===============*/
@@ -295,6 +311,7 @@ body.dark-theme {
 
 .new__img {
   width: 270px;
+  box-shadow: 0 12px 12px hsla(220, 18, 40%, 1.15);
   margin-bottom: 1rem;
 }
 
@@ -327,6 +344,7 @@ body.dark-theme {
 /*=============== COLLECTION ===============*/
 .collection {
   background-color: var(--bg-color-light);
+  box-shadow: 0 8px 12px hsla(220, 18, 40%, 0.15);
   overflow: hidden;
   transition: 0.4s; /*For animation dark mode*/
 }
@@ -334,6 +352,7 @@ body.dark-theme {
 .collection__container {
   position: relative;
   height: 571px;
+  box-shadow: 0 4px 12px hsla(220, 18, 40%, 0.15);
   display: grid;
   justify-items: center;
 }
@@ -346,27 +365,33 @@ body.dark-theme {
 .collection__explore {
   display: grid;
   column-gap: 2rem;
+  box-shadow: 0 4px 12px hsla(220, 18, 40%, 0.15);
   position: absolute;
 }
 
 .collection__explore:nth-child(2) {
   grid-template-columns: 230px max-content;
   bottom: 1rem;
+  box-shadow: 0 8px 12px hsla(220, 18, 40%, 1.15);
   margin-right: 5rem;
 }
 
 .collection__explore:nth-child(1) {
   grid-template-columns: max-content 230px;
+  box-shadow: 0 12px 12px hsla(220, 18, 40%, 1.15);
   top: 0;
   margin-left: 5rem;
 }
 
 .collection__data-men {
+  
   margin-top: 2.5rem;
+  box-shadow: 0 12px 12px hsla(220, 18, 40%, 1.15);
 }
 
 .collection__data-women {
   align-self: flex-end;
+  box-shadow: 0 12px 12px hsla(220, 18, 40%, 1.15);
   margin-bottom: 2.5rem;
 }
 /*=============== PRODUCTS ===============*/
@@ -380,6 +405,7 @@ body.dark-theme {
 
 .products__img {
   margin-bottom: 1rem;
+  box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
 }
 
 .products__title {
@@ -572,13 +598,16 @@ body.dark-theme {
   }
   .home__images img:nth-child(1) {
     width: 180px;
+      box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
     top: -7rem;
   }
   .home__images img:nth-child(2) {
+    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
     width: 150px;
   }
   .new__img {
-    width: 230px;
+    width: 230px
+    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
   }
   .new__link {
     padding-right: 0;
@@ -711,8 +740,10 @@ body.dark-theme {
   .home__images img:nth-child(1) {
     width: 345px;
     top: -14.5rem;
+    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
   }
   .home__images img:nth-child(2) {
+    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
     width: 277px;
   }
   .new__container {
@@ -722,6 +753,7 @@ body.dark-theme {
   }
   .new__img {
     margin-bottom: 1.25rem;
+    box-shadow: 0 1px 4px hwb(220 15% 84% / 0.99);
   }
   .new__title {
     font-size: var(--h3-font-size);
@@ -768,3 +800,43 @@ body.dark-theme {
   body {
     zoom: 2.3;
 }
+
+    #offline-message {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      font-size: 24px;
+      text-align: center;
+      visibility: hidden; /* Hidden by default */
+    }
+
+    #online-notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      padding: 10px 20px;
+      background-color: #28a745; /* Green for success */
+      color: white;
+      border-radius: 5px;
+      visibility: hidden; /* Hidden by default */
+    }
+
+    /* Animation for online notification */
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .fade-out {
+      animation: fadeOut 3s forwards;
+    }
+  }
