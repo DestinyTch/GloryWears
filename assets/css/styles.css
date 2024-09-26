@@ -91,7 +91,7 @@ img {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --bg-color: hsl(69, 76%, 45%);
+  --bg-color: hsl(0, 0%, 100%);
   --bg-color-light: hsl(220, 18%, 14%);
   --title-color: hsl(220, 8%, 90%);
   --text-color: hsl(220, 4%, 68%);
