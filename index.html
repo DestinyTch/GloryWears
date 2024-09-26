@@ -18,7 +18,11 @@
     />
 
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    
+    <!-- Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -318,7 +322,25 @@
     <script src="./assets/js/scrollreveal.min.js"></script>
 
     <!--=============== SWIPER JS ===============-->
-    <script src="./assets/js/swiper-bundle.min.js"></script>
+    
+    <!-- Swiper's JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js">
+  <script>
+  var swiper = new Swiper('.swiper', {
+    loop: true, // Enable looping of slides
+    autoplay: {
+      delay: 3000, // Delay between slides in milliseconds (3 seconds)
+      disableOnInteraction: false, // Autoplay will not stop after user interaction
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+</script>
+
 
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>
