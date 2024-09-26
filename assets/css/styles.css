@@ -113,7 +113,7 @@ body.dark-theme {
     the website, in dark theme 
 ==========*/
 .dark-theme .scroll-header {
-  box-shadow: 0 2px 8px hsla(220, 18%, 8%, 0.3);
+  box-shadow: 0 2px 5px hsla(220, 18%, 8%, 0.3);
 }
 
 .dark-theme .nav__menu {
@@ -169,7 +169,7 @@ body.dark-theme {
   left: 0;
   width: 100%;
   color: black;
-  box-shadow: 0 8px 12px hsla(220, 18, 40%, 1.15);
+  box-shadow: 0 8px 7px hsla(220, 18, 40%, 1.15);
   
  background-color: white;
   z-index: var(--z-fixed);
@@ -195,7 +195,7 @@ body.dark-theme {
     bottom: 1.5rem;
     background-color: white;
     color: black;
-    box-shadow: 0 5px 12px hsla(220, 18, 40%, 1.15);
+    box-shadow: 0 5px 7px hsla(220, 18, 40%, 1.15);
     width: 90%;
     left: 0;
     right: 0;
