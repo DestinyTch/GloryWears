@@ -169,7 +169,7 @@ body.dark-theme {
   left: 0;
   width: 100%;
   color: black;
-  box-shadow: 0 8px 7px hsla(220, 18, 40%, 1.15);
+  box-shadow: 0 4px hsla(220, 18%, 8%, 0.3);
   
  background-color: white;
   z-index: var(--z-fixed);
